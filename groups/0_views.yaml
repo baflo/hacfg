@@ -1,0 +1,16 @@
+Medien:
+  view: yes
+  entities:
+    - media_player.wohnzimmer_fernseher
+    - media_player.denon_avrx1000
+    - media_player.home
+    - media_player.chromecast_control
+    - group.mediensteuerung
+
+Licht:
+  view: yes
+  entities:
+    - group.schlafzimmerlicht
+    - group.wohnzimmerlicht
+    - group.wakeuplight
+

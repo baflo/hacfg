@@ -1,0 +1,22 @@
+Schlafzimmerlicht:
+  entities:
+    - group.schlafzimmerdecke
+    - light.schlafzimmer_lightstrip_plus_1
+
+Wohnzimmerlicht:
+  entities:
+    - group.wohnzimmerdecke
+    - light.deko_switch
+
+Schlafzimmerdecke:
+  entities:
+    - light.schlafzimmer_1
+    - light.schlafzimmer_2
+#  selective_control: true
+
+Wohnzimmerdecke:
+  entities:
+    - light.wohnzimmer_spot_1
+    - light.wohnzimmer_spot_2
+    - light.wohnzimmer_spot_3
+#  selective_control: true

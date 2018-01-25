@@ -1,0 +1,10 @@
+wakeuplight:
+  name: Wakeup light
+  control: hidden
+  entities:
+    - sensor.wakeup_start_time_lights
+    - input_datetime.wakeup_time
+    - input_number.wakeup_duration
+    - input_boolean.wakeup
+    - input_boolean.wakeup_weekends
+

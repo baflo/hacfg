@@ -1,0 +1,15 @@
+- platform: mvglive
+  nextdeparture:
+    - station: Siemenswerke
+      destination: Hauptbahnhof
+    - station: Bayerischer Rundfunk
+      destination: Studentenstadt
+
+- platform: time_date
+  display_options:
+    - 'time'
+#    - 'date'
+#    - 'date_time'
+#    - 'time_date'
+#    - 'time_utc'
+#    - 'beat'

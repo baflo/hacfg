@@ -1,0 +1,8 @@
+Mediensteuerung:
+  control: hidden
+  entities:
+    - script.firetv
+    - script.reset_tv_sound
+    - script.wiiu_spielen
+    - script.switch_spielen
+    - script.kamin

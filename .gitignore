@@ -2,9 +2,13 @@
 !*.yaml
 !automations
 !google_assistant
+!groups
 !inputs
+!media_player
 !scripts
 !scenes
+!sensors
+!switches
 !.gitignore
 secrets.yaml
 known_devices.yaml

@@ -50,7 +50,7 @@ map:
 sun:
 
 # Weather prediction
-sensor: !include sensor.yaml
+sensor: !include_dir_merge_list sensors
 
 # Text to speech
 tts:
@@ -66,7 +66,7 @@ frontend: !include frontend.yaml
 google_assistant: !include google_assistant/config.yaml
 
 # Use groups
-group: !include groups.yaml
+group: !include_dir_merge_named groups
 
 # Load automations
 automation: !include_dir_merge_list automations
@@ -75,10 +75,10 @@ automation: !include_dir_merge_list automations
 script: !include_dir_named scripts
 
 # Set up media players
-media_player: !include media_player.yaml
+media_player: !include_dir_merge_list media_players
 
 # Collect switches
-switch: !include switches.yaml
+switch: !include_dir_merge_list switches
 
 # All inputs
 input_datetime: !include inputs/datetime.yaml
