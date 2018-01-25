@@ -1,0 +1,14 @@
+###################################
+# BEGIN Alarm Clock
+###################################
+wakeup_duration:
+  name: Light fade-in duration
+  icon: mdi:clock-in
+  initial: 20
+  min: 5
+  max: 45
+  step: 5
+  mode: slider
+###################################
+# END Alarm Clock
+###################################

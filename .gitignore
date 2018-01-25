@@ -1,5 +1,9 @@
 *
 !*.yaml
+!automations
+!google_assistant
+!inputs
+!scripts
 !scenes
 !.gitignore
 secrets.yaml

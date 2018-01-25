@@ -1,0 +1,13 @@
+- alias: 'If Tuner or TV were turned off'
+  trigger:
+#    - platform: state
+#      entity_id: media_player.panasonic_viera_tv
+#      to: 'off'
+    - platform: state
+      entity_id: media_player.denon_avrx1000
+      to: 'off'
+  action:
+    - service: media_player.media_stop
+      data:
+        entity_id: media_player.chromecast
+

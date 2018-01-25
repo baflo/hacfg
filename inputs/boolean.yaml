@@ -1,0 +1,15 @@
+###################################
+# BEGIN Alarm Clock
+###################################
+wakeup:
+  name: 'Enable wakeup light'
+  icon: mdi:power
+  initial: off
+
+wakeup_weekends:
+  name: 'Wakeup weekends'
+  icon: mdi:power
+  initial: off
+###################################
+# END Alarm Clock
+###################################

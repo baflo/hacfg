@@ -1,0 +1,24 @@
+- alias: 'Map names for Tuner'
+  trigger:
+    platform: event
+    event_type: select_custom_source
+    event_data:
+      entity_id: media_player.denon_avrx1000
+  action:
+    - service: media_player.select_source
+      data_template:
+        entity_id: media_player.denon_avrx1000
+        source: >
+          {% set target = trigger.event.data.source|lower %}
+
+          {% if target in ('tv', 'fernseher') %}
+            TV AUDIO
+          {% elif target in ('chromecast') %}
+            Chromecast
+          {% elif target in ('radio', 'tuner') %}
+            TUNER
+          {% elif target in ('firetv', 'fire tv', 'amazon') %}
+            FireTV
+          {% else %}
+            {{ trigger.event.data.source }}
+          {% endif %}

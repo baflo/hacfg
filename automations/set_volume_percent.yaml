@@ -1,0 +1,23 @@
+- alias: 'Set volume percent'
+  trigger:
+    platform: event
+    event_type: volume_set_percent
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: "{{ -100 <= float(trigger.event.data.volume_percent) <= 100 }}"
+      - condition: template
+        value_template: "{{ not is_state('media_player.denon_avrx1000', 'off') }}"
+  action:
+    - service: persistent_notification.create
+      data_template:
+        message: "{{ trigger.event.data.volume_percent }}"
+    - service: media_player.volume_set
+      data_template:
+        entity_id: "{{ trigger.event.data.entity_id }}"
+        volume_level: >
+          {% set data = trigger.event.data %}
+          {% set entity = states.media_player[data.entity_id.split('.')[1]] %}
+          {% set newValue = float(data.volume_percent)/100 %}
+          {{ [1, [0, newValue]|max]|min }}

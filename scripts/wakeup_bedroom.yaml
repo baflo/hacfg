@@ -1,0 +1,14 @@
+alias: 'Wakeup lighting, smooth transition'
+sequence:
+  - service: light.turn_on
+    data_template:
+      entity_id: group.schlafzimmerlicht
+      brightness: 1
+      xy_color: [0.4600, 0.3700]
+  - delay:
+      seconds: 5
+  - service: light.turn_on
+    data_template:
+      entity_id: group.schlafzimmerlicht
+      brightness: 255
+      transition: '{{ states.input_number.wakeup_duration.state | multiply(60) | int }}'

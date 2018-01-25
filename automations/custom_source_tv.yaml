@@ -1,0 +1,20 @@
+- alias: 'Route TV source selection to broadlink'
+  trigger:
+    platform: event
+    event_type: select_custom_source
+    event_data:
+      entity_id: media_player.panasonic_viera_tv
+  action:
+    - service_template: switch.turn_on
+      data_template:
+        entity_id: >
+          {% set entityId = trigger.event.data.entity_id|lower %}
+          {% set target = trigger.event.data.source|lower %}
+
+          {% if target in ('tuner','verstärker','denon','chromecast','firetv', 'wiiu') %}
+            switch.broadlink_panasonic_hdmi2
+          {% elif target in ('switch') %}
+            switch.broadlink_panasonic_hdmi1
+          {% else %}
+            switch.broadlink_panasonic_tv
+          {% endif %}

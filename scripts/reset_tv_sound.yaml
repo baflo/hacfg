@@ -1,0 +1,10 @@
+alias: TV Ton zurücksetzen
+sequence:
+    - service: switch.turn_off
+      data:
+        entity_id: switch.broadlink_denon_power
+    - service: switch.turn_on
+      data:
+        entity_id: switch.broadlink_denon_power
+
+

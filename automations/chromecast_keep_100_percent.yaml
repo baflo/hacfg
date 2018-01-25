@@ -1,0 +1,13 @@
+- alias: "Keep Chromecast Volume at 100 percent"
+  trigger:
+    platform: numeric_state
+    entity_id: media_player.chromecast
+    value_template: "{{ state.attributes.volume_level }}"
+    below: 1
+    for:
+      seconds: 1
+  action:
+    service: media_player.volume_set
+    data:
+      entity_id: media_player.chromecast
+      volume_level: 1
