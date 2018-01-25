@@ -1,0 +1,13 @@
+- platform: cast
+  name: Google Home
+  host: 192.168.178.131
+- platform: cast
+  name: Chromecast
+  host: 192.168.178.51
+- platform: denonavr
+  name: denon_avrx1000
+  host: 192.168.178.24
+- platform: panasonic_viera
+  name: panasonic_viera_tv
+  host: 192.168.178.142
+  mac: c0:d9:62:53:1b:03

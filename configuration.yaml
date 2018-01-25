@@ -1,0 +1,97 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: 48.09
+  longitude: 11.53
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 571
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Berlin
+  # Customization file
+  customize: !include customize.yaml
+
+# Show links to resources in log and frontend
+# introduction:
+
+# Enables configuration UI
+config:
+
+http:
+  # Secrets are defined in the file secrets.yaml
+  api_password: !secret http_password
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+# discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time
+history:
+
+# View all events in a logbook
+logbook:
+
+# Enables a map showing the location of tracked devices
+map:
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor: !include sensor.yaml
+
+# Text to speech
+tts:
+  - platform: google
+
+# Use for casting youtube etc.
+media_extractor:
+
+# Enables the frontend
+frontend: !include frontend.yaml
+
+# Sets up the Google Assistant interface
+google_assistant: !include google_assistant/config.yaml
+
+# Use groups
+group: !include groups.yaml
+
+# Load automations
+automation: !include_dir_merge_list automations
+
+# Register scripts
+script: !include_dir_named scripts
+
+# Set up media players
+media_player: !include media_player.yaml
+
+# Collect switches
+switch: !include switches.yaml
+
+# All inputs
+input_datetime: !include inputs/datetime.yaml
+input_number: !include inputs/number.yaml
+input_boolean: !include inputs/boolean.yaml
+  
+
+# New light definition
+#hue:
+#  bridges:
+#    - host: Philips-hue
+
+# Old light definition
+light:
+  - platform: hue
+    host: Philips-hue

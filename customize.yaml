@@ -1,0 +1,106 @@
+group.default_view:
+  hidden: true
+
+group.wohnzimmerlicht:
+  google_assistant: true
+  google_assistant_type: light
+
+group.schlafzimmerlicht:
+  google_assistant: true
+  google_assistant_type: light
+
+group.schlafzimmerdecke:
+  google_assistant: true
+  google_assistant_type: light
+
+group.wohnzimmerdecke:
+  google_assistant: true
+  google_assistant_type: light
+
+media_player.chromecast:
+  hidden: true
+
+media_player.chromecast_control:
+  name: Chromecast
+  google_assistant: true
+  google_assistant_name: Chromecast
+
+media_player.panasonic_viera_tv:
+  google_assistant: true
+  google_assistant_name: Fernseher
+  google_assistant_type: switch
+  source_list:
+    - TV
+    - HDMI1
+    - HDMI2
+
+switch.broadlink_panasonic_power:
+  hidden: true
+  assumed_state: true
+
+switch.broadlink_panasonic_tv:
+  hidden: true
+  assumed_state: true
+
+switch.broadlink_panasonic_hdmi1:
+  hidden: true
+  assumed_state: true
+
+switch.broadlink_panasonic_hdmi2:
+  hidden: true
+  assumed_state: true
+
+switch.broadlink_denon_power:
+  hidden: true
+  assumed_state: true
+
+switch.template_panasonic_tv:
+  hidden: true
+  assumed_state: true
+
+light.deko_switch:
+  friendly_name: Deko
+  google_assistant: true
+
+light.schlafzimmer_lightstrip_plus_1:
+  friendly_name: Schlafzimmerregal
+  google_assistant: true
+
+media_player.denon_avrx1000:
+  friendly_name: Tuner
+  google_assistant: true
+  google_assistant_name: Tuner
+  aliases:
+    - Verstärker
+    - Denon
+
+script.reset_tv_sound:
+  friendly_name: Ton zurücksetzen
+  google_assistant: true
+
+script.firetv:
+  can_cancel: false
+  assumed_state: true
+  friendly_name: FireTV starten
+  google_assistant: FireTV
+  google_assistant_name: FireTV
+
+script.kamin:
+  can_cancel: false
+  assumed_state: true
+  friendly_name: Kamin
+  google_assistant: true
+
+script.wiiu_spielen:
+  can_cancel: false
+  assumed_state: true
+  friendly_name: WiiU starten
+  google_assistant: true
+  google_assistant_name: WiiU
+
+script.switch_spielen:
+  can_cancel: false
+  assumed_state: true
+  friendly_name: Switch starten
+  google_assistant: true
+  google_assistant_name: Nintendo Switch

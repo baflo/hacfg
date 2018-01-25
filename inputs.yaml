@@ -1,0 +1,33 @@
+###################################
+# BEGIN Alarm Clock
+###################################
+input_datetime:
+  wakeup_time:
+    name: Wakeup Time
+    initial: 06:30
+    has_time: true
+    has_date: false
+
+input_number:
+  wakeup_duration:
+    name: Light fade-in duration
+    icon: mdi:clock-in
+    initial: 20
+    min: 5
+    max: 45
+    step: 5
+    mode: slider
+
+input_boolean:
+  wakeup:
+    name: 'Enable wakeup light'
+    icon: mdi:power
+    initial: off
+
+  wakeup_weekends:
+    name: 'Wakeup weekends'
+    icon: mdi:power
+    initial: off
+###################################
+# END Alarm Clock
+###################################
