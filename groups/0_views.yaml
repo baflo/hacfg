@@ -1,10 +1,10 @@
 Medien:
   view: yes
   entities:
-    - media_player.wohnzimmer_fernseher
+    - media_player.fernseher
     - media_player.denon_avrx1000
     - media_player.home
-    - media_player.chromecast_control
+    - media_player.chromecast
     - group.mediensteuerung
 
 Licht:

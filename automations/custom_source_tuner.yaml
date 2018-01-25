@@ -5,6 +5,10 @@
     event_data:
       entity_id: media_player.denon_avrx1000
   action:
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.denon_avrx1000
+    - wait_template: "{{ not is_state('media_player.denon_avrx1000', 'off') }}"
     - service: media_player.select_source
       data_template:
         entity_id: media_player.denon_avrx1000

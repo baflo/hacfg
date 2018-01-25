@@ -5,6 +5,10 @@
     event_data:
       entity_id: media_player.panasonic_viera_tv
   action:
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.panasonic_viera_tv
+    - wait_template: "{{ not is_state('media_player.denon_avrx1000', 'off') }}"
     - service_template: switch.turn_on
       data_template:
         entity_id: >

@@ -1,14 +1,6 @@
 group.default_view:
   hidden: true
 
-group.wohnzimmerlicht:
-  google_assistant: true
-  google_assistant_type: light
-
-group.schlafzimmerlicht:
-  google_assistant: true
-  google_assistant_type: light
-
 group.schlafzimmerdecke:
   google_assistant: true
   google_assistant_type: light
@@ -18,14 +10,17 @@ group.wohnzimmerdecke:
   google_assistant_type: light
 
 media_player.chromecast:
-  hidden: true
-
-media_player.chromecast_control:
   name: Chromecast
+  assumed_state: true
   google_assistant: true
   google_assistant_name: Chromecast
 
 media_player.panasonic_viera_tv:
+  hidden: true
+#  assumed_state: true
+
+media_player.fernseher:
+  assumed_state: true
   google_assistant: true
   google_assistant_name: Fernseher
   google_assistant_type: switch
@@ -33,6 +28,15 @@ media_player.panasonic_viera_tv:
     - TV
     - HDMI1
     - HDMI2
+
+media_player.denon_avrx1000:
+  friendly_name: Tuner
+  google_assistant: true
+  google_assistant_name: Tuner
+  google_assistant_type: switch
+  aliases:
+    - Verstärker
+    - Denon
 
 switch.broadlink_panasonic_power:
   hidden: true
@@ -54,10 +58,6 @@ switch.broadlink_denon_power:
   hidden: true
   assumed_state: true
 
-switch.template_panasonic_tv:
-  hidden: true
-  assumed_state: true
-
 light.deko_switch:
   friendly_name: Deko
   google_assistant: true
@@ -65,14 +65,6 @@ light.deko_switch:
 light.schlafzimmer_lightstrip_plus_1:
   friendly_name: Schlafzimmerregal
   google_assistant: true
-
-media_player.denon_avrx1000:
-  friendly_name: Tuner
-  google_assistant: true
-  google_assistant_name: Tuner
-  aliases:
-    - Verstärker
-    - Denon
 
 script.reset_tv_sound:
   friendly_name: Ton zurücksetzen
